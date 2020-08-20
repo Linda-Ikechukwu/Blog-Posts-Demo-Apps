@@ -1,0 +1,68 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form,
+.header {
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dotted purple;
+}
+input,
+button {
+  width: 175px;
+  height: 20px;
+  margin-top: 7px;
+  border: 2px solid purple;
+}
+button {
+  background-color: purple;
+  box-sizing: content-box;
+  margin-top: 15px;
+  cursor: pointer;
+}
+label {
+  padding: 10px;
+}
+.header {
+  display: none;
+  flex-direction: row;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid purple;
+}
+
+.profile h2 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: purple;
+}
+
+figure {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 10px;
+  color: purple;
+}
+
+audio {
+  width: 250px;
+  height: 40px;
+  margin-top: 10px;
+}
