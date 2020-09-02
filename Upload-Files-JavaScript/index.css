@@ -32,8 +32,8 @@ label {
   padding: 10px;
 }
 .header {
-  display: none;
   flex-direction: row;
+  display: none;
 }
 .profile {
   display: flex;
@@ -47,22 +47,23 @@ label {
   border: 2px solid purple;
 }
 
-.profile h2 {
-  font-size: 15px;
+figure h2 {
+  font-size: 18px;
   font-weight: bold;
-  padding-left: 10px;
   color: purple;
+  margin: 0;
 }
 
 figure {
-  margin-inline-start: 0px;
+  margin-inline-start: 10px;
   margin-inline-end: 0px;
   margin-top: 10px;
   color: purple;
 }
 
 audio {
-  width: 250px;
+  width: 170px;
   height: 40px;
   margin-top: 10px;
 }
+

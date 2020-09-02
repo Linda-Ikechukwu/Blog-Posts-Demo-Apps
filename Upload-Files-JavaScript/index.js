@@ -1,37 +1,39 @@
-let profileName,profileImg,profileAud;
+
 
 const getValuesFromInputs = () =>{
-   profileName = document.querySelector('input.profile-name').value;
-   profileImg = document.querySelector('input.profile-img').files[0];
-   profileAud = document.querySelector('input.profile-aud').files[0];
+   const profileName = document.querySelector('input.profile-name').value;
+   const profileImg = document.querySelector('input.profile-img').files[0];
+   const profileAud = document.querySelector('input.profile-aud').files[0];
 
-  document.querySelector('form').style.display = 'none';
+   document.querySelector('form').style.display = 'none';
+
+   return [profileName, profileImg, profileAud];
   
 }
 
 const convertInputValues = () => {
+  const [profileName, profileImg, profileAud] = getValuesFromInputs();
   
-  const image = new Blob([profileImg]);
-  profileImg = URL.createObjectURL(image);
-
-  const audio = new Blob([profileAud]);
-  profileAud = URL.createObjectURL(audio)
+  const profileImgURL = URL.createObjectURL(profileImg);
+  const profileAudURL = URL.createObjectURL(profileAud);
+  
+  return[profileAudURL, profileImgURL, profileName ]
 
 }
 
 const addInputToProfile = () => {
-    document.querySelector('.profile h2').innerHTML = `${profileName}`;
-    document.querySelector('.profile img').setAttribute('src', profileImg);
-    document.querySelector('.aud').setAttribute('src', profileAud);
 
-    document.querySelector('.header').style.display = 'block';
+    const [profileAudURL, profileImgURL, profileName ]  = convertInputValues();
 
-    
+    document.querySelector('figure h2').innerHTML = `Hey ${profileName}`;
+    document.querySelector('.profile img').setAttribute('src', profileImgURL);
+    document.querySelector('.aud').setAttribute('src', profileAudURL);
+
+    document.querySelector('.header').style.display = 'flex';
 }
 
 document.querySelector('button').addEventListener('click', (e) => {
   e.preventDefault();
-  getValueFromInputs();
-  convertInputValues();
   addInputToProfile();
 });
+
