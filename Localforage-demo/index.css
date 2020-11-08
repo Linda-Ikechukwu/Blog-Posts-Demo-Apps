@@ -1,0 +1,69 @@
+body{
+    font-family: arial, sans-serif;
+    padding: 10px;
+    position: relative;
+}
+
+button{
+    cursor: pointer;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form button{
+    background-color: blue;
+    width: 100px;
+    color: #fff;
+}
+
+.form label{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+#modal .backdrop{
+    background-color: rgba(43, 40, 40, 0.5);
+    width: 100vw;
+    height: 100vh;
+}
+
+#modal .form{
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

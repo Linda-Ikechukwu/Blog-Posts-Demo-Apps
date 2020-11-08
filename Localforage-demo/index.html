@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localforage Demo</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="form">
+       <label><span>Client Name:</span>
+           <input id="clientName" type="text" name='clientName' value="">
+       </label>
+       <label><span>Phone Number:</span>
+           <input id="clientPhone" type="number" name='clientPhone' value="">
+       </label>
+       <label><span>Needs:</span>
+           <input id="clientNeed" type="text" name='clientNeed' value="">
+       </label>
+       <button type="submit" id="submit">Save</button>
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Phone Number</th>
+                    <th>Needs</th>
+                    <th>Actions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal">
+        <div class="backdrop">
+            <div class="form">
+                <label><span>Client Name:</span>
+                    <input id="editName" type="text" name='editName' value="">
+                </label>
+                <label><span>Phone Number:</span>
+                    <input id="editPhone" type="number" name='editPhone' value="">
+                </label>
+                <label><span>Needs:</span>
+                    <input id="editNeed" type="text" name='editNeed' value="">
+                </label>
+                <button type="submit" id="update">Update</button>
+            </div>
+        </div>
+
+    </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.9.0/localforage.min.js"></script>
+   <script src="index.js"></script>
+</body>
+</html>
