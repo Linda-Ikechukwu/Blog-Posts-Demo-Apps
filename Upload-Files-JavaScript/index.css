@@ -18,12 +18,22 @@ form,
 input,
 button {
   width: 175px;
-  height: 20px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 7px;
   border: 2px solid purple;
 }
+
+input[type="file"]{
+  border: none;
+}
+
 button {
-  background-color: purple;
+  background-color: #800080;
+  color: white;
   box-sizing: content-box;
   margin-top: 15px;
   cursor: pointer;
@@ -65,5 +75,10 @@ audio {
   width: 170px;
   height: 40px;
   margin-top: 10px;
+}
+
+input:focus{
+  outline: none;
+  border: 3px dotted orange;
 }
 
