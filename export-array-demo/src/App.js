@@ -28,7 +28,11 @@ function App() {
     <div className="App">
       {loading ?
         <p>Loading</p> :
-        <ArrayToExcelButton apiArray={userData} fileName={"UserData.xls"} buttonTitle={"Download User Data"} />
+        <>
+          <h1>Export Array to Excel Demo</h1>
+          <ArrayToExcelButton apiArray={userData} fileName={"UserData.xls"} buttonTitle={"Download User Data"} />
+        </>
+
       }
     </div>
   );
